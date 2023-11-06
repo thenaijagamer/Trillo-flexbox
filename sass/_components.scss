@@ -171,6 +171,7 @@
       flex-direction: column;
       justify-content: center;
       padding: 2rem 0;
+      text-align: center;
     }
   }
   &__icon {
@@ -213,6 +214,9 @@
   display: flex;
   align-items: center;
   border-bottom: var(--line);
+  @media only screen and (max-width: $bp-small) {
+    flex-wrap: wrap;
+  }
 
   &__heading {
     color: var(--color-grey-dark-3);
@@ -226,12 +230,18 @@
       font-size: 1.8rem;
       margin-right: auto;
     }
+    @media only screen and (max-width: $bp-small) {
+      flex: 0 0 50%;
+    }
   }
   &__stars {
     margin-right: auto;
     display: flex;
     @media only screen and (max-width: $bp-small) {
-      display: none;
+      flex: 0 0 50%;
+      margin-left: 1.5rem;
+      order: 1;
+      align-self: flex-start;
     }
   }
   &__icon-star,
@@ -247,6 +257,12 @@
     @media only screen and (max-width: $bp-medium-small) {
       align-items: center;
       margin-left: 1rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 1.5rem;
+      margin-left: 0;
+      align-self: first baseline;
+      padding-top: 1rem;
     }
   }
   &__icon-location {
@@ -266,8 +282,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @media only screen and (max-width: $bp-medium-small) {
-      margin-right: 0;
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 1.5rem;
+      margin-left: 0;
+      order: 2;
     }
   }
   &__rating-average {
