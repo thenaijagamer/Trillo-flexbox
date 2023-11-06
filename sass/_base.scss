@@ -17,11 +17,11 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
-$bp-largest: 75em; //1200px
+$bp-largest: 75em; //1800px
 $bp-large: 68.75em; //1200px
-$bp-medium: 53.125em; //1200px
-$bp-medium-small: 37.5em; //1200px
-$bp-small: 31.25em; //1200px
+$bp-medium: 53.125em; //900px
+$bp-medium-small: 37.5em; //600px
+$bp-small: 31.25em; //500px
 
 *,
 *::before,
@@ -34,7 +34,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   @media only screen and (max-width: $bp-large) {
-    font-size: 50%;
+    font-size: 54.6%;
   }
 }
 body {
