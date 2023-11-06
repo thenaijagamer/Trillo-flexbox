@@ -10,7 +10,7 @@
     "start": "npm-run-all --parallel watch:sass devserver ",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css ",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "css/style.prefix.css css/style.css --output-style compressed",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "build": "index.html",
     "predeploy": "npm run build",
@@ -25,7 +25,7 @@
     "postcss-cli": "^9.1.0"
   },
   "dependencies": {
-    "node-sass": "^9.0.0",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "node-sass": "^9.0.0"
   }
 }
